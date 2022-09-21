@@ -4,13 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 class SubmitButton extends StatelessWidget {
   const SubmitButton({
     Key? key,
-    required this.controller1,
-    required this.controller2,
     required this.label,
+    required this.onTap,
   }) : super(key: key);
 
-  final TextEditingController controller1;
-  final TextEditingController controller2;
+  final VoidCallback onTap;
   final String label;
 
   @override
@@ -19,10 +17,7 @@ class SubmitButton extends StatelessWidget {
       width: double.infinity,
       height: 70,
       child: ElevatedButton(
-        onPressed: () {
-          print(controller1.value.text);
-          print(controller2.value.text);
-        },
+        onPressed: onTap,
         style: ElevatedButton.styleFrom(
           elevation: 0,
           shape: RoundedRectangleBorder(
