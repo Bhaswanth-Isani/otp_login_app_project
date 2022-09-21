@@ -30,7 +30,7 @@ class LoginPage extends HookWidget {
                 title: "OTP",
                 textInputType: TextInputType.number,
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 40),
               SizedBox(
                 width: double.infinity,
                 height: 70,
