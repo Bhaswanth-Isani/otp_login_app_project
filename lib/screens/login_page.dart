@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:otp_login_app_project/widgets/submit_button.dart';
 
 import '../widgets/text_input_field.dart';
 
@@ -31,29 +31,13 @@ class LoginPage extends HookWidget {
                 textInputType: TextInputType.number,
               ),
               const SizedBox(height: 40),
-              SizedBox(
-                width: double.infinity,
-                height: 70,
-                child: ElevatedButton(
-                  onPressed: () {
-                    print(emailController.value.text);
-                    print(otpController.value.text);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Text(
-                    "LOGIN",
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-              )
+              SubmitButton(
+                onTap: () {
+                  debugPrint(emailController.value.text);
+                  debugPrint(otpController.value.text);
+                },
+                label: "LOGIN",
+              ),
             ],
           ),
         ),
