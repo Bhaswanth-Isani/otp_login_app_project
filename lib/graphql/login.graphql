@@ -1,0 +1,7 @@
+mutation LoginUser($email: String!, $otp: String!) {
+    loginUser(input: {email: $email, otp: $otp}) {
+        id
+        email
+        name
+    }
+}

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'screens/register_page.dart';
-
+import 'package:otp_login_app_project/screens/login_page.dart';
+import 'package:otp_login_app_project/screens/register_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

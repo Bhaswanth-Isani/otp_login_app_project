@@ -33,6 +33,10 @@ class LoginPage extends HookWidget {
               const SizedBox(height: 40),
               SubmitButton(
                 onTap: () {
+                  // final loginRequest = GLoginUserReq((loginUser) => loginUser
+                  //   ..vars.email = emailController.value.text
+                  //   ..vars.otp = otpController.value.text);
+                  // client.request(loginRequest).listen((event) => print(event.data));
                   debugPrint(emailController.value.text);
                   debugPrint(otpController.value.text);
                 },
